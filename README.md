@@ -9,7 +9,7 @@ Support copy code to clipboard for markdown-it.
 
 Using native javascript to copy code to clipboard so that we don't need to the compatibility of libraries like [clipboard.js](https://clipboardjs.com/).
 
-![](./assets/Feature.gif)
+![](./assets/feature.gif)
 
 ## Usage
 
