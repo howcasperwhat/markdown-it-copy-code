@@ -5,10 +5,15 @@
 
 Support copy code to clipboard for markdown-it.
 
+## Features
+
+Using native javascript to copy code to clipboard so that we don't need to the compatibility of libraries like [clipboard.js](https://clipboardjs.com/).
+
+![](./assets/Feature.gif)
+
 ## Usage
 
 We supply plugin, style and script for you to use.
-Script is required to activate click-event of the copy button.
 
 ### Install
 ``` sh
@@ -48,8 +53,6 @@ onMounted(() => {
   // useCopyCode('your-button-class')
 })
 </script>
-<template></template>
-<style></style>
 ```
 
 ### Style
