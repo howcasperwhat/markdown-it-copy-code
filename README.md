@@ -69,7 +69,7 @@ import 'markdown-it-copy-code/styles/large.css'
 ```
 
 You can also customize the style by yourself based on `className` you set in options.
-See [default.css](./styles/default.css) for reference.
+See [large.css](./styles/large.css) for reference.
 
 <!-- Badges -->
 
