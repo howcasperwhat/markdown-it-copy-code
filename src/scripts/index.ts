@@ -1,6 +1,8 @@
-import { DEFAULT_BUTTON_CLASS } from '../stores'
+import { DEFAULT_BUTTON_CLASS, OPTIONS } from '../stores'
+
 // https://github.com/vuejs/vitepress/blob/main/src/client/app/composables/copyCode.ts
-function useCopyCode(btnClass: string = DEFAULT_BUTTON_CLASS) {
+function useCopyCode() {
+  const btnClass = OPTIONS.buttonClass ?? DEFAULT_BUTTON_CLASS
   const client = typeof window !== 'undefined'
   if (client) {
     const timeoutIdMap: WeakMap<HTMLButtonElement, NodeJS.Timeout> = new WeakMap()

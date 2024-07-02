@@ -1,4 +1,4 @@
-export interface MarkdownItCodeCopyOptions {
+export interface MarkdownItCopyCodeOptions {
   containerClass?: string
   buttonClass?: string
   codeSVG?: string

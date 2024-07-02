@@ -27,6 +27,7 @@ import MarkdownItCopyCode from 'markdown-it-copy-code'
 
 const md = new MarkdownIt()
 md.use(MarkdownItCopyCode, {
+  // if you want use default config, just ignore options below.
   // below shows default options
   containerClass: 'markdown-copy-code-container',
   buttonClass: 'markdown-copy-code-button',
@@ -49,22 +50,22 @@ import { onMounted } from 'vue'
 
 onMounted(() => {
   useCopyCode()
-  // if you have customized the buttonClass, you should pass it as argument
-  // useCopyCode('your-button-class')
 })
 </script>
 ```
 
 ### Style
 
-We supply two styles for you to use.
-If you use [shiki](https://shiki.style/packages/markdown-it) to highlight code, `shiki.css` may be more suitable for you.
+We supply three styles for you to use.
+You can choose one of them based on your preference.
+
 ``` ts
+// no matter which style you choose, you should import base.css first
 import 'markdown-it-copy-code/styles/base.css'
-// if using shiki
-import 'markdown-it-copy-code/styles/shiki.css'
-// else
-import 'markdown-it-copy-code/styles/default.css'
+// choose one of the following styles
+import 'markdown-it-copy-code/styles/large.css'
+// import 'markdown-it-copy-code/styles/medium.css'
+// import 'markdown-it-copy-code/styles/small.css'
 ```
 
 You can also customize the style by yourself based on `className` you set in options.

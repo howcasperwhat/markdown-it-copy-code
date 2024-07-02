@@ -1,3 +1,5 @@
+import type { MarkdownItCopyCodeOptions } from '../types'
+
 const DEFAULT_BUTTON_CLASS = 'markdown-copy-code-button'
 const DEFAULT_CONTAINER_CLASS = 'markdown-copy-code-container'
 const DEFAULT_CODE_SVG_CLASS = 'markdown-copy-code-code'
@@ -20,6 +22,8 @@ const DEFAULT_DONE_SVG = `
     </g>
 </svg>
 `
+
+export const OPTIONS: MarkdownItCopyCodeOptions = {}
 
 export {
   DEFAULT_BUTTON_CLASS,

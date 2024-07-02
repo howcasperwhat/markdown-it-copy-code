@@ -1,0 +1,13 @@
+.markdown-copy-code-button {
+  border-radius: 3px;
+  right: 8px;
+  top: 8px;
+  width: 30px;
+  height: 30px;
+}
+
+.markdown-copy-code-code>svg,
+.markdown-copy-code-done>svg {
+  width: 16px;
+  height: 16px;
+}

@@ -1,9 +1,17 @@
 import type MarkdownIt from 'markdown-it'
-import type { MarkdownItCodeCopyOptions } from './types'
-import { DEFAULT_BUTTON_CLASS, DEFAULT_CODE_SVG_CLASS, DEFAULT_CONTAINER_CLASS, DEFAULT_COPY_SVG, DEFAULT_DONE_SVG, DEFAULT_DONE_SVG_CLASS } from './stores'
+import type { MarkdownItCopyCodeOptions } from './types'
+import {
+  DEFAULT_BUTTON_CLASS,
+  DEFAULT_CODE_SVG_CLASS,
+  DEFAULT_CONTAINER_CLASS,
+  DEFAULT_COPY_SVG,
+  DEFAULT_DONE_SVG,
+  DEFAULT_DONE_SVG_CLASS,
+  OPTIONS,
+} from './stores'
 import { useCopyCode } from './scripts'
 
-function renderCodeFence(renderer: MarkdownIt.Renderer.RenderRule, options?: MarkdownItCodeCopyOptions) {
+function renderCodeFence(renderer: MarkdownIt.Renderer.RenderRule, options?: MarkdownItCopyCodeOptions) {
   const {
     containerClass: _container_ = DEFAULT_CONTAINER_CLASS,
     buttonClass: _button_ = DEFAULT_BUTTON_CLASS,
@@ -12,6 +20,7 @@ function renderCodeFence(renderer: MarkdownIt.Renderer.RenderRule, options?: Mar
     codeSVG: _code_ = DEFAULT_COPY_SVG,
     doneSVG: _done_ = DEFAULT_DONE_SVG,
   } = options ?? {}
+  Object.assign(OPTIONS, options)
   const rule: MarkdownIt.Renderer.RenderRule = (tokens, idx, options, env, self) => {
     const content = tokens[idx].content
     const rendered = renderer(tokens, idx, options, env, self)
@@ -36,9 +45,9 @@ function renderCodeFence(renderer: MarkdownIt.Renderer.RenderRule, options?: Mar
   return rule
 }
 
-const MarkdownItCopyCode: MarkdownIt.PluginWithOptions<MarkdownItCodeCopyOptions> = (
+const MarkdownItCopyCode: MarkdownIt.PluginWithOptions<MarkdownItCopyCodeOptions> = (
   md: MarkdownIt,
-  options?: MarkdownItCodeCopyOptions,
+  options?: MarkdownItCopyCodeOptions,
 ) => {
   md.renderer.rules.fence = renderCodeFence(md.renderer.rules.fence!, options)
 }
