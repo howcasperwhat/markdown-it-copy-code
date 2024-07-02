@@ -1,7 +1,7 @@
 {
   "name": "markdown-it-copy-code",
   "type": "module",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A markdown-it plugin to add code-copying function for code fence.",
   "author": "casper",
   "license": "MIT",
