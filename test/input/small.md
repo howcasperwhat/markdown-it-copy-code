@@ -1,4 +1,4 @@
-# Large SVG
+# Small SVG
 
 ``` markdown
 ## Single Line Code Block
