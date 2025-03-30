@@ -48,7 +48,7 @@
     "typecheck": "tsc --noEmit"
   },
   "peerDependencies": {
-    "markdown-it": "^14.1.0"
+    "markdown-it": ">= 13.0.0"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.21.1",
