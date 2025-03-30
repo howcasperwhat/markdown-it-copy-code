@@ -45,7 +45,7 @@
     "build": "unbuild",
     "lint": "eslint .",
     "test": "vitest run",
-    "serve": "serve & open http://localhost:3000/test/output/",
+    "serve": "serve -l 3000",
     "typecheck": "tsc --noEmit"
   },
   "peerDependencies": {
