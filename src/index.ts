@@ -28,19 +28,19 @@ function renderCodeFence(renderer: MarkdownIt.Renderer.RenderRule, options?: Mar
     if (content.length === 0 || content === '\n')
       return rendered
 
-    return `
-      <div class="${_container_}">
-        ${rendered}
-        <button class="${_button_}">
-          <div class="${_copysvg_}">
-            ${_copy_}
-          </div>
-          <div class="${_donesvg_}">
-            ${_done_}
-          </div>
-        </button>
-      </div>
-    `
+    return [
+      `<div class="${_container_}">`,
+      rendered,
+      `<button class="${_button_}">`,
+      `<div class="${_copysvg_}">`,
+      _copy_,
+      '</div>',
+      `<div class="${_donesvg_}">`,
+      _done_,
+      '</div>',
+      '</button>',
+      '</div>',
+    ].join('\n')
   }
   return rule
 }
