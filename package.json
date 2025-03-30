@@ -56,12 +56,11 @@
     "@shikijs/twoslash": "^1.9.1",
     "@types/markdown-it": "^14.1.1",
     "@types/node": "^20.14.9",
-    "bumpp": "^9.4.1",
     "eslint": "^9.5.0",
     "jsdom": "^24.1.0",
     "markdown-it": "^14.1.0",
     "typescript": "^5.5.2",
     "unbuild": "^2.0.0",
-    "vitest": "^1.6.0"
+    "vitest": "^3.0.9"
   }
 }
