@@ -6,7 +6,7 @@ function useCopyCode() {
   const client = typeof window !== 'undefined'
   if (client) {
     const timeoutIdMap: WeakMap<HTMLButtonElement, NodeJS.Timeout> = new WeakMap()
-    window.addEventListener('click', (e) => {
+    const handleClick = (e: MouseEvent) => {
       const el = e.target as HTMLButtonElement
       if (el.matches(`button.${btnClass}`)) {
         const parent = el.parentElement
@@ -28,7 +28,11 @@ function useCopyCode() {
           timeoutIdMap.set(el, timeoutId)
         })
       }
-    })
+    }
+    window.addEventListener('click', handleClick)
+    return () => {
+      window.removeEventListener('click', handleClick)
+    }
   }
 }
 
