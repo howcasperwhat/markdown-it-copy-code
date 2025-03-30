@@ -1,8 +1,8 @@
 export interface MarkdownItCopyCodeOptions {
   containerClass?: string
   buttonClass?: string
-  codeSVG?: string
+  copySVG?: string
   doneSVG?: string
-  codeSVGClass?: string
+  copySVGClass?: string
   doneSVGClass?: string
 }

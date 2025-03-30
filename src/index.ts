@@ -2,9 +2,9 @@ import type MarkdownIt from 'markdown-it'
 import type { MarkdownItCopyCodeOptions } from './types'
 import {
   DEFAULT_BUTTON_CLASS,
-  DEFAULT_CODE_SVG_CLASS,
   DEFAULT_CONTAINER_CLASS,
   DEFAULT_COPY_SVG,
+  DEFAULT_COPY_SVG_CLASS,
   DEFAULT_DONE_SVG,
   DEFAULT_DONE_SVG_CLASS,
   OPTIONS,
@@ -15,9 +15,9 @@ function renderCodeFence(renderer: MarkdownIt.Renderer.RenderRule, options?: Mar
   const {
     containerClass: _container_ = DEFAULT_CONTAINER_CLASS,
     buttonClass: _button_ = DEFAULT_BUTTON_CLASS,
-    codeSVGClass: _codesvg_ = DEFAULT_CODE_SVG_CLASS,
+    copySVGClass: _copysvg_ = DEFAULT_COPY_SVG_CLASS,
     doneSVGClass: _donesvg_ = DEFAULT_DONE_SVG_CLASS,
-    codeSVG: _code_ = DEFAULT_COPY_SVG,
+    copySVG: _copy_ = DEFAULT_COPY_SVG,
     doneSVG: _done_ = DEFAULT_DONE_SVG,
   } = options ?? {}
   Object.assign(OPTIONS, options)
@@ -32,8 +32,8 @@ function renderCodeFence(renderer: MarkdownIt.Renderer.RenderRule, options?: Mar
       <div class="${_container_}">
         ${rendered}
         <button class="${_button_}">
-          <div class="${_codesvg_}">
-            ${_code_}
+          <div class="${_copysvg_}">
+            ${_copy_}
           </div>
           <div class="${_donesvg_}">
             ${_done_}

@@ -31,10 +31,10 @@ md.use(MarkdownItCopyCode, {
   // below shows default options
   containerClass: 'markdown-copy-code-container',
   buttonClass: 'markdown-copy-code-button',
-  codeSVGClass: 'markdown-copy-code-code',
+  copySVGClass: 'markdown-copy-code-copy',
   doneSVGClass: 'markdown-copy-code-done',
   // default is hugeicons:task-01
-  codeSVG: '<svg>...</svg>',
+  copySVG: '<svg>...</svg>',
   // default is hugeicons:task-done-01
   doneSVG: '<svg>...</svg>',
 })

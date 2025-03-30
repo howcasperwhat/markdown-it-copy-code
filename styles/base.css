@@ -20,7 +20,7 @@
   background-color: #8884;
 }
 
-.markdown-copy-code-code,
+.markdown-copy-code-copy,
 .markdown-copy-code-done {
   pointer-events: none;
   width: 100%;
@@ -31,11 +31,11 @@
 }
 
 .copied>.markdown-copy-code-done,
-.markdown-copy-code-code {
+.markdown-copy-code-copy {
   display: flex;
 }
 
-.copied>.markdown-copy-code-code,
+.copied>.markdown-copy-code-copy,
 .markdown-copy-code-done {
   display: none;
 }
@@ -44,6 +44,6 @@
   stroke: rgb(63, 133, 63);
 }
 
-.markdown-copy-code-code>svg {
+.markdown-copy-code-copy>svg {
   stroke: currentColor;
 }

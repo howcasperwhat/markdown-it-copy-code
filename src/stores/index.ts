@@ -2,7 +2,7 @@ import type { MarkdownItCopyCodeOptions } from '../types'
 
 const DEFAULT_BUTTON_CLASS = 'markdown-copy-code-button'
 const DEFAULT_CONTAINER_CLASS = 'markdown-copy-code-container'
-const DEFAULT_CODE_SVG_CLASS = 'markdown-copy-code-code'
+const DEFAULT_COPY_SVG_CLASS = 'markdown-copy-code-copy'
 const DEFAULT_DONE_SVG_CLASS = 'markdown-copy-code-done'
 
 // https://icon-sets.iconify.design/hugeicons/task-01/
@@ -28,7 +28,7 @@ export const OPTIONS: MarkdownItCopyCodeOptions = {}
 export {
   DEFAULT_BUTTON_CLASS,
   DEFAULT_CONTAINER_CLASS,
-  DEFAULT_CODE_SVG_CLASS,
+  DEFAULT_COPY_SVG_CLASS,
   DEFAULT_DONE_SVG_CLASS,
   DEFAULT_COPY_SVG,
   DEFAULT_DONE_SVG,
