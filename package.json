@@ -44,7 +44,8 @@
   "scripts": {
     "build": "unbuild",
     "lint": "eslint .",
-    "test": "vitest",
+    "test": "vitest run",
+    "serve": "serve & open http://localhost:3000/test/output/",
     "typecheck": "tsc --noEmit"
   },
   "peerDependencies": {
@@ -59,6 +60,7 @@
     "eslint": "^9.5.0",
     "jsdom": "^24.1.0",
     "markdown-it": "^14.1.0",
+    "serve": "^14.2.4",
     "typescript": "^5.5.2",
     "unbuild": "^2.0.0",
     "vitest": "^3.0.9"

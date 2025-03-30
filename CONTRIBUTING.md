@@ -20,12 +20,14 @@ npm run dev
 
 > [!WARNING]
 > Make sure building the project before running test cases.
+> HMR (Hot Module Replacement) is not supported in the test environment.
 
 To run the tests, run
 
 ```bash
 npm run build
 npm run test
+npm run serve
 ```
 
 ## Code Style

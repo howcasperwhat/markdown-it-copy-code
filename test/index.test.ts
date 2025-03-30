@@ -25,10 +25,16 @@ describe('index', () => {
       it(`render ${path}`, async () => {
         const rendered = [
           md.render(`${content}`),
-          `<style>\n${[
-            markdown, base, shiki,
-            styles[parsed.name],
-          ].join('\n')}\n</style>`,
+          '<style>',
+          markdown,
+          base,
+          shiki,
+          styles[parsed.name],
+          '</style>',
+          '<script type="module">',
+          'import { useCopyCode } from \'/dist/index.mjs\'',
+          'useCopyCode()',
+          '</script>',
         ].join('\n').trim().replace(/\r\n/g, '\n')
         await expect(rendered)
           .toMatchFileSnapshot(
