@@ -1,6 +1,7 @@
 import MarkdownIt from 'markdown-it'
 import Shiki from '@shikijs/markdown-it'
 import { rendererRich, transformerTwoslash } from '@shikijs/twoslash'
+// eslint-disable-next-line antfu/no-import-dist
 import MarkdownItCopyCode from '../dist'
 
 const md = new MarkdownIt({
@@ -19,8 +20,8 @@ md.use(await Shiki({
     transformerTwoslash({
       explicitTrigger: true,
       renderer: rendererRich(),
-    })
-  ]
+    }),
+  ],
 })).use(MarkdownItCopyCode)
 
 export default md
