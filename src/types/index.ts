@@ -8,5 +8,6 @@ export interface MarkdownItCopyCodeOptions {
 }
 
 export interface UseCopyCodeOptions {
+  buttonClass?: string
   displayDuration?: number
 }

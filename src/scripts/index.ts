@@ -3,7 +3,7 @@ import { UseCopyCodeOptions } from '../types'
 
 // https://github.com/vuejs/vitepress/blob/main/src/client/app/composables/copyCode.ts
 function useCopyCode(options: UseCopyCodeOptions) {
-  const btnClass = OPTIONS.buttonClass ?? DEFAULT_BUTTON_CLASS
+  const btnClass = OPTIONS.buttonClass ?? options.buttonClass ?? DEFAULT_BUTTON_CLASS
   const client = typeof window !== 'undefined'
   if (client) {
     const timeoutIdMap: WeakMap<HTMLButtonElement, NodeJS.Timeout> = new WeakMap()
