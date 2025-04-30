@@ -30,6 +30,8 @@ npm run test
 npm run serve
 ```
 
+See `test/output/small.html`, `test/output/medium.html`, and `test/output/large.html` for the test results.
+
 ## Code Style
 
 We use [ESLint](https://eslint.org/) with [@antfu/eslint-config](https://github.com/antfu/eslint-config) for code style.
@@ -39,3 +41,5 @@ To lint the code, run
 ```bash
 npm run lint --fix
 ```
+
+Ensure fixing all the linting errors before submitting a pull request.

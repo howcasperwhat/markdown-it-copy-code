@@ -33,7 +33,7 @@ describe('index', () => {
         '</style>',
         '<script type="module">',
         'import { useCopyCode } from \'/dist/index.mjs\'',
-        'useCopyCode()',
+        'useCopyCode({buttonClass: \'markdown-copy-code-button\', displayDuration: 3000})',
         '</script>',
       ].join('\n').trim().replace(/\r\n/g, '\n')
       await expect(rendered)
