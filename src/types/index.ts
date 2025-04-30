@@ -6,3 +6,7 @@ export interface MarkdownItCopyCodeOptions {
   copySVGClass?: string
   doneSVGClass?: string
 }
+
+export interface UseCopyCodeOptions {
+  displayDuration?: number
+}
