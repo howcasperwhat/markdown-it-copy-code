@@ -10,13 +10,7 @@ To set up the project locally, you need to have [Node.js](https://nodejs.org/en/
 npm i
 ```
 
-## Development
-
-To start the development server, run
-
-```bash
-npm run dev
-```
+## Tests
 
 > [!WARNING]
 > Make sure building the project before running test cases.
