@@ -49,7 +49,14 @@ import { useCopyCode } from 'markdown-it-copy-code'
 import { onMounted } from 'vue'
 
 onMounted(() => {
-  useCopyCode()
+  useCopyCode({
+    // if you want use default config, just ignore options below.
+    // below shows default options
+    // same as above, but intended for decoupled frontend-backend environments
+    buttonClass: 'markdown-copy-code-button',
+    // milliseconds the button remains after copy success
+    displayDuration: 2000,
+  })
 })
 </script>
 ```
